@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Customerlist</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<h1>Customer</h1>
+    <table>
+		<tr>
+		    <th>Name</th>
+		   	<th>Street address</th>
+		   	<th>Post code</th>
+		   	<th>Post office</th>
+		    <th>Phone</th>
+		    <th>Email</th>				    
+		</tr>  
+    	<tr th:each = "customer : ${customers}">
+    		<td th:text="${customer.first_name} + ' ' + ${customer.last_name}"></td>
+    		<td th:text="${customer.streetaddress}"></td>
+    		<td th:text="${customer.postcode}"></td>
+    		<td th:text="${customer.postoffice}"></td>
+    		<td th:text="${customer.phone}"></td>
+    		<td th:text="${customer.email}"></td>							
+    	</tr>
+     </table>  	
+</body>
+</html>
