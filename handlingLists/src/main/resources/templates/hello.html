@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Handling Lists</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style>
+    	p {
+    		padding: 10px 2px 0px 2px; 
+    		margin: 0px; 		
+    	}
+    	td {
+    		padding: 2px 2px 0px 2px;
+    	} 
+    </style>
+</head>
+<body>	
+	<p>Welcome to the Haaga-Helia!</p>
+	<table>
+		<tr th:each="student: ${students}">
+			<td th:text="${student.firstName} + ' ' + ${student.lastName}">Name ...</td>
+		</tr>	
+	</table>    
+</body>
+</html>
